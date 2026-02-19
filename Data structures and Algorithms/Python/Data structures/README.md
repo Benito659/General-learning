@@ -5,7 +5,7 @@ This folder list all differents data structures that we can find in python.
 ```
 def my_function( a, b, *args ):
     print( args )
-```python
+``` Python
 
 - "*args" : the * before args tells Python to collect all the extra positional arguments into a tuple named args
 - args is a tuple 
