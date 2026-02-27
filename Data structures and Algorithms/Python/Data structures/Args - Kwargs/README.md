@@ -30,18 +30,19 @@ def my_function(a, b, *args):
     numbers = [1, 2, 3]
     print(add(*numbers))  # unpacks list as a=1, b=2, c=3 
     ```
-    - Unpacks the lists
+- Unpacks the lists
     ```python
     print_items(*[1,2], *[3,4])  
     (1, 2, 3, 4)
     ```
 - Can be use for Merging Lists :
     ```python
-    def add(a, b, c):
-        return a + b + c
+    list1 = [1, 2]
+    list2 = [3, 4]
+    list3 = [5, 6]
 
-    numbers = [1, 2, 3]
-    print(add(*numbers))  # unpacks list as a=1, b=2, c=3
+    merged = [*list1, *list2, *list3]
+    print(merged)
     ```
 - Can be use for Merging sets:
     ```python
@@ -53,6 +54,7 @@ def my_function(a, b, *args):
     new_list = [*old_list]
     ```
 
+- Positional argument must follow keywords argument and not inverse
 
 
 ## Kwargs
@@ -69,9 +71,9 @@ Output :
 {'name': 'Junior', 'country': 'Senegal', 'role': 'Data Engineer'}
 ```
 
-- ** Keyword argument ** is an argument that have both a name as well as a value attached immediatly
-- kwargs = keyword arguments, ** = tells Python to collect them into a dictionary
-- it will pick up any named argument while **args pick up any unamed argument
+- **Keyword argument** is an argument that have both a name as well as a value attached immediatly
+- **kwargs** = keyword arguments, ** = tells Python to collect them into a dictionary
+- it will pick up any named argument while ***args** pick up any unamed argument
 - Accessing values inside kwargs :
 ```python
 def greet(**kwargs):
@@ -86,14 +88,13 @@ Hello Junior
     - Don’t know in advance how many keyword arguments will be passed
     - Build frameworks, APIs, decorators, or reusable utilities
     - Build flexible functions
-
-    ```python
+     ```python
     def create_user(**kwargs):
         user = {}
         for key, value in kwargs.items():
             user[key] = value
         return user
-    u = create_user(name="Benito", stack="Data", level="Mid")
+    u = create_user(name="Junior", stack="Data", level="Mid")
     print(u)
     ```
 - Order in function definition :
@@ -246,3 +247,23 @@ Hello Junior
     - Add new parameters without breaking code
     - Maintain backward compatibility
     - Build scalable APIs
+
+
+- Unpacking ( dictionaries for Kwargs and  list for args) : 
+    ```python
+    def function(a, b , *args, keyword=True, **kwargs):
+        print(a,b)
+        print(args)
+        print(keyword)
+        print(kwargs)
+    
+    d = {'param_a': 43,'param_b':56}
+    function(1,2, *[5,4,6], param=42,**d)
+
+    output :
+    1 2
+    (5,4,6)
+    True
+    {'param': 42, 'param_a':43, 'param_b':56}
+    ```
+    - 
