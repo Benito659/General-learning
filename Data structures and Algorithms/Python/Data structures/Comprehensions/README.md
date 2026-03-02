@@ -11,11 +11,11 @@ In python a comprehension is a short , powerful and readable way to create a new
     #exemple with comprehension
     [i*2 for i in old_list]
     ```
-    - if statement for filtering :
-        ```python
-        [i*2 for i in old_list if i%2 == 0 ]
-        ```
-    - if statement for iterative value calculation
-        ```python
-        [i*2  if i >2  else i>3 for i in old_list ]
-        ``` 
+- if statement for filtering :
+    ```python
+    [i*2 for i in old_list if i%2 == 0 ]
+    ```
+- if statement for iterative value calculation
+    ```python
+    [i*2  if i >2  else i>3 for i in old_list ]
+    ``` 
