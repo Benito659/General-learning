@@ -1,7 +1,11 @@
 # NATURAL LANGUAGE PROCESSING (NLP)
 Natural language processing is field of study making sense of language by using statistics and computers.
 
-# FAIRE UN MENU
+## GUIDE
+- [NLP Topics](#nlp-topics)
+- [NLP Applications](#nlp-applications)
+    - [Regular expressions](#regular-expression)
+    - [Tokenisation](#tokenisation)
 
 ## NLP Topics 
 - Regular expression
