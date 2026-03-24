@@ -33,9 +33,9 @@ Natural language processing is field of study making sense of language by using 
     re.match("abc","abcdef")
 ```
 
-- The match is between a pattern with a string
-- It take the match as the fist argument and the string as the second
-- We can use special pattern that regex understand
+- The match is between a pattern and a string.
+- It take the match as the fist argument and the string as the second.
+- We can use special pattern that regex understand.
 - **\w** only match a character, and matches any word character
     - letters: a-z, A-Z
     - digits: 0-9
