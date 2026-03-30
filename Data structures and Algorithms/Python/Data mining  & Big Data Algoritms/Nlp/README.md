@@ -364,8 +364,59 @@ Natural language processing is field of study making sense of language by using 
     pattern = r"https?://[\w\.-]+"
 ```
 
+- Get position of a match in a sentence
+```python
+    match = re.search("coconuts", scene_one)
+    print(match.start(), match.end()) # Give the start and end indexes of match
+```
+
 
 
 ### Tokenisation
+- Tokenizasion is the process of turning a string or document into smaller chunk
+- Those smaller chunk are called token
+- One step in preparing a text for NLP
+- They are many theory and rules and you can create your own rules
+- In General tokenization does :
+    - breaking out words and sentences
+    - separating punctuation
+    - separating all hashtags in a tweet
+- **NLTK** is a common library use for tokenization
+```python
+    from nltk.tokenize import word_tokenize
+    word_tokenize("Hi there!")
 
+    output:
+    ["Hi", "there", "!"]
+```
+- Why use tokenisation :
+    - Easier to map part of speech
+    - Matching common words
+    - Removing unwanted tokens
+    - Can help us see negation in a sentence
+    - "I don't like Sam's shoes." =["I","do","n't","like","Sam","s","shoes","."]
+- NLTK have many tokenizer : 
+    - sent_tokenize : tokenise document into sentense 
+    - regexp_tokenize : tokenize document or string base on regular expression
+    - tweetTokeniser : Special class for tweet tokenisation, can separate hashtags, mentions and a lot of exclamation point
+- Search VS Match :
+    - **re.match** only match the pattern with the beginning of the string
+    - **re.seach** will go though the entire string to findmatch
 
+- **USE CASE** :
+    - split document into sentences : 
+        ```python
+            from nltk.tokenize import sent_tokenize
+            sentences = sent_tokenise(scene_one)
+        ```
+    - tokenise a sentence into words :
+        ```python
+            from nltk.tokenize import word_tokenize
+            tokenize_words=word_tokenize(sentences[3])
+        ```
+    - get unique tokens of the entire document :
+        ```python
+            unique_tokens= set(word_tokenize(scene_one))
+        ```
+
+ 
