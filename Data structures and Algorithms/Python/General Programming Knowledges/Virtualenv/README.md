@@ -65,6 +65,10 @@ which python # give where python is
 ```bash
     python -m pip freeze
 ```
+- to get all package that have been install in **requirements.txt**
+```bash
+    python -m pip freeze > requirements.txt
+```
 - to get only one dependancy
 ```bash
     python -m pip freeze | grep pandas

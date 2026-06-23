@@ -84,6 +84,22 @@ Natural language processing is field of study making sense of language by using 
         re.search("h.llo", "hello")  # matches
     ```
 - **+ or \*** use to greedy match, grabing repeat or single letter
+    - + (one or more) :
+        - Matches at least one occurrence of the preceding pattern
+        - Example:
+            - Regex: a+
+            - Matches: "a", "aa", "aaa"
+            - Does not match an empty string
+            - grab one or more of this character
+    - * (zero or more) :
+        - Matches zero or more occurrences of the preceding pattern.
+        - Regex: a*
+        - Matches: "" (empty), "a", "aa", "aaa"
+        - grab as many as possible, even none
+- What does “greedy” mean : Greedy matching means the regex engine will take as much as it can while still allowing the overall pattern to succeed
+- Greedy vs non-greedy (quick contrast) : If you don’t want greedy behavior, you can make it lazy by adding **?**
+    - a+? → matches as few as as possible
+    - .*? → stops at the earliest valid match
 - **\S** anything that is not a space 
 - using capital letter negate them 
 - **^** start of a string
@@ -303,9 +319,10 @@ Natural language processing is field of study making sense of language by using 
         ```
 
 - Flag (Modifiers) :
-    - re.I ignore case
-    - re.M multiline
-    - re.S dot matches newline
+    - re.I ignore case (A = a)
+    - re.M multiline (^ and $ work per line)
+    - re.S dot matches newline (. includes newline)
+    - can be combine (re.search(r"^hello.*world$", text, re.I | re.M | re.S))
 
 
 #### Use case Regex: 
@@ -356,7 +373,7 @@ Natural language processing is field of study making sense of language by using 
 
 - Phone Number :
 ```python
-    pattern = r"\+?\d{1,3}[- ]?\d{6,10}"
+    pattern = r"\+?\d{1,3}[-]?\d{6,10}"
 ```
 
 - url :

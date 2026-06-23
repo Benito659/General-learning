@@ -261,4 +261,5 @@ for func in [add_one, double, add_one]:
     - use lambda for keys=
     - use lambda for map()
     - use lambda for filter()
-    - use lambda  for small transformation
+    - use lambda for reduce()
+    - use lambda  for small transformation or function use only once

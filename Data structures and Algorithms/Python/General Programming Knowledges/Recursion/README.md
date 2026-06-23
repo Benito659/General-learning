@@ -51,6 +51,8 @@ We want to calculate how many way are they for a  frog to jump from one lily pad
 ```
 
 - Second approach : Improve time performance with cache
+    - lru_cache store elements in entry of function as key value
+    - the number of lru cache give an indice of size of the function
     - Measure time as the number of jump pads increase :
     ```python
         for e in [10, 30, 31, 32, 33]:
@@ -69,7 +71,7 @@ We want to calculate how many way are they for a  frog to jump from one lily pad
                 return 1
             return n_paths(start=start+1, end=end)+ n_paths(start=start+2, end=end)
     ```
-    - e can use another parameters that will list all type of jumps it can make :
+    - we can use another parameters that will list all type of jumps it can make :
     ```python
         from functools import lru_cache
 
@@ -80,6 +82,7 @@ We want to calculate how many way are they for a  frog to jump from one lily pad
             if start == end :
                 return 1
             return sum([n_paths(start=start +j , end = end) for j in jumps])
+    
 
     ```
 
@@ -99,5 +102,5 @@ We want to calculate how many way are they for a  frog to jump from one lily pad
     Very common in:
     - Data structures
     - Algorithms
-    - Techncal interviews
+    - Technical interviews
     - Competitive programming
