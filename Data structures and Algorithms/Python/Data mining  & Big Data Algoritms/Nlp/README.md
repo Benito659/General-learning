@@ -1,31 +1,31 @@
 # NATURAL LANGUAGE PROCESSING (NLP)
-Natural language processing is field of study making sense of language by using statistics and computers.
+Natural language processing is field of study that make sense of language by using statistics and computers.
 
 ## GUIDE
 - [NLP Topics](#nlp-topics)
 - [NLP Applications](#nlp-applications)
-    - [Regular expressions](#regular-expression)
+    - [Regular expressions](#regular-expressions)
     - [Tokenisation](#tokenisation)
 
 ## NLP Topics 
-- Regular expression
-- Topics identifications
-- Sentiment Analysis
+- Regular expressions
+- Topic identification
+- Sentiment analysis
 
 ## NLP Applications
 - Chatbots
 - Translation
 - Sentiment analysis
 
-### Regular expression
+### Regular expressions
 - String with a special syntax
 - Allows us to match patterns in other strings
-- Applications of regural expression
+- Applications of regural expressions
     - Find all web links in a document
     - Find and parse email address
     - Extract phone numbers
-    - Remove / Replace unwanted character
-    - validate password
+    - Remove / replace unwanted character(s)
+    - Validate password
 
 - It is use in python by importing re library :
 ```python
@@ -34,9 +34,9 @@ Natural language processing is field of study making sense of language by using 
 ```
 
 - The match is between a pattern and a string.
-- It take the match as the fist argument and the string as the second.
+- It take the match as the first argument and the string as the second.
 - We can use special pattern that regex understand.
-- **\w** only match a character, and matches any word character
+- **\w** only match a character, and match any word character
     - letters: a-z, A-Z
     - digits: 0-9
     - underscore: _
