@@ -24,7 +24,7 @@ Natural language processing is field of study that make sense of language by usi
     - Find all web links in a document
     - Find and parse email address
     - Extract phone numbers
-    - Remove / replace unwanted character(s)
+    - Remove/replace unwanted character(s)
     - Validate password
 
 - It is use in python by importing re library :
@@ -33,9 +33,9 @@ Natural language processing is field of study that make sense of language by usi
     re.match("abc","abcdef")
 ```
 
-- The match is between a pattern and a string.
-- It take the match as the first argument and the string as the second.
-- We can use special pattern that regex understand.
+- The match is between a pattern and a string
+- It take the match as the first argument and the string as the second
+- We can use special pattern that regex understand
 - **\w** only match a character, and match any word character
     - letters: a-z, A-Z
     - digits: 0-9
@@ -101,7 +101,7 @@ Natural language processing is field of study that make sense of language by usi
     - a+? → matches as few as as possible
     - .*? → stops at the earliest valid match
 - **\S** anything that is not a space 
-- using capital letter negate them 
+- Using capital letter negate them 
 - **^** start of a string
     - The match must begin at the start of the string
     ```python
