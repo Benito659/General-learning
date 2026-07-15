@@ -16,6 +16,9 @@ Basic Edidting :
 - Ctrl + shift + K : Delete line
 - Ctrl + Enter : Insert line below
 - Ctrl + shift + Enter : Insert line above
+- Shift + alt + left : Expand selection
+- Ctrl + shift + alt + left : Selection in the same line
+- Ctrl+ l : select all the line
 
 
 
