@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    ports:
+      - "8080:8080"
+    command: go run main.go
