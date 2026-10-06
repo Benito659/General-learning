@@ -1,0 +1,1 @@
+# This Folder will list differents algorithms , Fundamentals most knows and specific one i train on
